@@ -9,7 +9,7 @@ const auth = isBrowser
       clientID: process.env.AUTH0_CLIENTID,
       redirectUri: process.env.AUTH0_CALLBACK,
       responseType: "token id_token",
-      scope: "openid profile email",
+      scope: "openid profile email read:advice",
     })
   : {}
 
@@ -43,6 +43,8 @@ const setSession = (cb = () => {}) => (err, authResult) => {
     cb()
     return
   }
+
+  console.log({ authResult })
 
   if (authResult && authResult.accessToken && authResult.idToken) {
     let expiresAt = authResult.expiresIn * 1000 + new Date().getTime()
