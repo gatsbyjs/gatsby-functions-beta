@@ -1,23 +1,34 @@
 {
-  "name": "auth0",
-  "version": "1.0.0",
+  "name": "gatsby-starter-hello-world",
   "private": true,
-  "description": "Auth0",
-  "author": "Joel Smith",
-  "keywords": [
-    "gatsby"
-  ],
+  "description": "A simplified bare-bones starter for Gatsby",
+  "version": "0.1.0",
+  "license": "0BSD",
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
     "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "gatsby": "^3.2.1",
+    "@reach/router": "^1.3.4",
+    "auth0-js": "^9.15.0",
+    "gatsby": "^3.4.0-next.3",
     "gatsby-plugin-gatsby-cloud": "^2.3.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
