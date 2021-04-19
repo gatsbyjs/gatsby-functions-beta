@@ -5,6 +5,8 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  flags: {
+    FUNCTIONS: true,
+  },
   plugins: ["gatsby-plugin-gatsby-cloud"],
 }
