@@ -16,10 +16,10 @@
   },
   "dependencies": {
     "gatsby": "^3.1.0-functions-next.60",
-    "gatsby-plugin-gatsby-cloud": "^2.3.0",
     "gatsby-plugin-functions": "^0.1.0-7",
+    "gatsby-plugin-gatsby-cloud": "^2.3.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "twilio": "^3.60.0"
+    "twilio": "^3.61.0"
   }
 }
