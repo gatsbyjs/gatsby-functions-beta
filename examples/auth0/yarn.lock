@@ -5026,6 +5026,13 @@ gatsby-page-utils@^1.4.0-next.1:
     lodash "^4.17.21"
     micromatch "^4.0.2"
 
+gatsby-plugin-create-client-paths@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-create-client-paths/-/gatsby-plugin-create-client-paths-3.3.0.tgz#322422f7b1156bb8fe345bbf2fd5e640719ef1d7"
+  integrity sha512-ncP57+AQF/cTJgeDyYO6yNacDnp7BnjWE7nC3N/AXxt4oOP+l0SNlqSAU5oGZ7GUrkLr+wS3BWIl1PFsWXuKqg==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+
 gatsby-plugin-gatsby-cloud@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-gatsby-cloud/-/gatsby-plugin-gatsby-cloud-2.3.0.tgz#cf8863ec9ac3042b15909277033c0661bf0977b2"

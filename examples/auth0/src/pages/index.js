@@ -1,37 +1,83 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
-import { getAccessToken } from "../utils/auth"
+import { useAuth0 } from "@auth0/auth0-react"
 
-const Root = () => {
-  const [advice, setAdvice] = useState("")
+import Layout from "../components/layout"
+
+export default function Home() {
+  const [response, setResponse] = useState()
+  const { getAccessTokenSilently, isLoading, error, user } = useAuth0()
+
+  const callApi = async path => {
+    try {
+      setResponse("Loading...")
+
+      const token = await getAccessTokenSilently({
+        audience: process.env.GATSBY_AUTH0_AUDIENCE,
+      })
+
+      const api = await fetch("/api/advice", {
+        headers: {
+          authorization: "Bearer " + token,
+        },
+      })
+
+      const body = await api.json()
+      setResponse(body.advice)
+    } catch (e) {
+      setResponse(e.message)
+    }
+  }
+
   return (
-    <div>
-      <p>Hello Gatsby!</p>
-      <Link to="/account">Go to your account</Link>
-
-      <p>
+    <Layout>
+      <div className="container mx-auto">
+        <h2 className="text-xl mb-3">Authenticating with Auth0</h2>
+        {!isLoading && !user ? (
+          <p className="mb-3">
+            Before being able to call an API your user will need to authenticate
+            first. Go ahead and click the <strong>Login</strong>
+            button on the top right.
+          </p>
+        ) : (
+          <p className="mb-3">
+            You are now signed in. To sign out, click the{" "}
+            <strong>Logout</strong> button on the top right.
+          </p>
+        )}
+        <pre className="mb-3 text-gray-800 text-sm border-solid border border-gray-400 bg-gray-200 p-3">
+          <code>{JSON.stringify({ isLoading, error, user }, null, 2)}</code>
+        </pre>
+        <h2 className="text-xl mb-3">Calling a Netlify Function</h2>
+        <p className="mb-3">
+          Then once the user is authenticated, calling the API will be possible.
+          If you try this without authenticating, you&#39;ll get an error.
+        </p>
         <button
-          onClick={async e => {
-            const token = getAccessToken()
-            const api = await fetch("/api/advice", {
-              headers: {
-                authorization: "Bearer " + token,
-              },
-            })
-            const body = await api.json()
-            if (body.advice) {
-              setAdvice(body.advice)
-            }
-
-            console.log({ token })
-          }}
+          className="mr-3 mb-1 text-white bg-gray-600 border-0 py-1 px-3 focus:outline-none hover:bg-gray-800 rounded text-base md:mt-0"
+          type="button"
+          onClick={() => callApi("/me")}
         >
-          Get some advice!
+          My Profile
         </button>
-        <div>{advice}</div>
-      </p>
-    </div>
+        <p className="mb-3 text-xs text-gray-600">
+          Requires a valid access_token.
+        </p>
+        <button
+          className="mb-1 text-white bg-gray-600 border-0 py-1 px-3 focus:outline-none hover:bg-gray-800 rounded text-base md:mt-0"
+          type="button"
+          onClick={() => callApi("/shows")}
+        >
+          TV Shows
+        </button>
+        <p className="mb-3 text-xs text-gray-600">
+          Requires a valid access_token with the read:shows scope.
+        </p>
+        {response && (
+          <pre className="mb-3 text-gray-800 text-sm border-solid border border-gray-400 bg-gray-200 p-3">
+            <code>{JSON.stringify(response, null, 2)}</code>
+          </pre>
+        )}
+      </div>
+    </Layout>
   )
 }
-
-export default Root

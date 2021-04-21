@@ -8,5 +8,11 @@ module.exports = {
   flags: {
     FUNCTIONS: true,
   },
-  plugins: ["gatsby-plugin-gatsby-cloud"],
+  plugins: [
+    "gatsby-plugin-gatsby-cloud",
+    {
+      resolve: "gatsby-plugin-create-client-paths",
+      options: { prefixes: ["/*"] },
+    },
+  ],
 }
