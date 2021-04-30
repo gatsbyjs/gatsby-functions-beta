@@ -54,7 +54,7 @@
 
 4.  **Learn more**
 
-    - [Documentation](https://www.gatsbyjs.com/docs/functions?utm_source=starter&utm_medium=readme&utm_campaign=gatsby-functions-beta)
+    - [Documentation](https://www.gatsbyjs.com/docs/how-to/functions/getting-started/?utm_source=starter&utm_medium=readme&utm_campaign=gatsby-functions-beta)
 
 ## 🙌 Contributing
 1. **Fork this repo**
