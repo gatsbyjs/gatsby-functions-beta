@@ -7,7 +7,37 @@
   Gatsby Functions Starters
 </h1>
 
-## 🚀 Quick start
+
+##  🛠 Quick Start with Functions
+1. **Install `gatsby ^3.4`**
+
+    Make sure you're using the latest version of Gatsby to get functions included by default.
+
+    ```bash
+    yarn add gastby@latest
+    ```
+
+2. **Add the flag `FUNCTIONS: true`**
+
+    Add the FUNCTIONS flag to your `gatsby-config.js`
+
+    ```js
+    module.exports = {
+      flags: {
+        FUNCTIONS: true
+      },
+      // ...Other configuration
+    }
+    ```
+3. **Add `gatsby-plugin-gatsby-cloud`**
+
+    To ensure propering routing across all your builds in Gatsby Cloud, include the Gatsby Cloud plugin in your project.
+
+    ```bash
+    yarn add gastby-plugin-gatsby-cloud
+    ```
+
+## 🚀 Using the Starters
 
 1.  **Browse Starters.**
 
@@ -24,7 +54,7 @@
 
 4.  **Learn more**
 
-    - [Documentation](https://www.gatsbyjs.com/docs/functions?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+    - [Documentation](https://www.gatsbyjs.com/docs/functions?utm_source=starter&utm_medium=readme&utm_campaign=gatsby-functions-beta)
 
 ## 🙌 Contributing
 1. **Fork this repo**
