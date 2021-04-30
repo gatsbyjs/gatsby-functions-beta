@@ -1,25 +1,10 @@
 {
-  "name": "functions-starters",
+  "name": "gatsby-functions-beta",
   "version": "1.0.0",
   "private": true,
   "description": "Functions Starters",
   "author": "Joel Smith",
   "keywords": [
-    "gatsby"
-  ],
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
-  "dependencies": {
-    "gatsby": "^3.4.0-next.3",
-    "gatsby-plugin-gatsby-cloud": "^2.3.0",
-    "gatsby-plugin-theme-ui": "^0.6.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "theme-ui": "^0.6.2"
-  }
+    "gatsby", "gatsby functions", "gatsby starters"
+  ]
 }
