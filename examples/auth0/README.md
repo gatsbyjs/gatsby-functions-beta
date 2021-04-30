@@ -1,48 +1,54 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# gatsby-auth0-functions
 
-## 🚀 Quick start
+This example shows how to use [@serverless-jwt](https://github.com/sandrinodimattia/serverless-jwt) with Gatsby and Gatsby Hosted Functions.
 
-1.  **Create a Gatsby site.**
+## Inspiration
+This code was inspired by this [article](https://sandrino.dev/blog/securing-netlify-functions-with-serverless-jwt) and [repo](https://github.com/sandrinodimattia/serverless-jwt).
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+## How does example this work?
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+### Gatsby
 
-2.  **Start developing.**
+The Gatsby application uses [@auth0/auth0-react](https://github.com/auth0/auth0-react) to authenticate the user. Once the user is authenticated, the Gatsby application will receive an `id_token` and `access_token` from Auth0;
 
-    Navigate into your new site’s directory and start it up.
+The `access_token` is then provided to our Netlify Functions to authenticate the request.
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+### Gatsby Hosting Functions
 
-3.  **Open the code and start customizing!**
+In the Gatsby Hosting Functions we use [@serverless-jwt/jwt-verifier](https://github.com/sandrinodimattia/serverless-jwt/tree/master/packages/jwt-verifier) to secure our functions.
 
-    Your site is now running at http://localhost:8000!
+The `JwtVerifier` serves as a way to verify your token. If the token is not valid, the we return an error to the client. If it is valid, it will expose all of the claims to the current function and you'll have the guarantee that the request is authenticated.
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+```js
+const {
+  JwtVerifier,
+  getTokenFromHeader,
+} = require("@serverless-jwt/jwt-verifier");
 
-4.  **Learn more**
+const jwt = new JwtVerifier({
+  issuer: process.env.JWT_ISSUER,
+  audience: process.env.JWT_AUDIENCE,
+});
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+const shows = async (req, res) => {
+  const scope = "read:shows";
+  const token = getTokenFromHeader(req.get("authorization"));
+  const claims = await jwt.verifyAccessToken(token);
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+  if (!claims || !claims.scope || claims.scope.indexOf(scope) === -1) {
+    return res.status(403).json({
+      error: "access_denied",
+      error_description: `Token does not contain the required '${scope}' scope`,
+    });
+  }
+}
+```
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Testing
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+To test this application locally you'll need to:
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+1. Create an application in Auth0 of type "Single Page Application" and configure `http://localhost:8000` as the Allowed Callback URL, Allowed Logout URL, Allowed Web Origins and Allowed CORS.
+2. Create an API in Auth0 (eg: with identifier `uhttps://api/tv-shows`) and create a permission for that API (eg: `read:shows`)
+3. Rename the `.env-template` file to `.env.development` and update all of the settings there.
+4. Run `yarn run start` which will run the Gatsby application and the Gatsby Hosting functions.

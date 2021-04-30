@@ -1,6 +1,20 @@
+const activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
+
+require("dotenv").config({
+  path: `.env.${activeEnv}`,
+});
+
 module.exports = {
-  siteMetadata: {
-    title: "Auth0",
+  flags: {
+    FUNCTIONS: true,
   },
-  plugins: ["gatsby-plugin-gatsby-cloud"],
+  plugins: [
+    {
+      resolve: "gatsby-plugin-create-client-paths",
+      options: { prefixes: ["/*"] },
+    },
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-gatsby-cloud`,
+  ],
 };
