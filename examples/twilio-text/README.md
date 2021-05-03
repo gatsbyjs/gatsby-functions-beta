@@ -11,7 +11,7 @@
 
 1.  **Get TwilioCredentials.**
 
-    There are **3** environment variable you'll need to add your project to propertly run the starter:
+    There are **3** environment variable you'll need to add your project to properly run the starter:
     - `TWILIO_ACCOUNT_SID`: Get Twilio Account SID in the [Twilio Console Dashboard](https://www.twilio.com/console)
     - `TWILIO_AUTH_TOKEN`: Get Twilio Auth Token in the [Twilio Console Dashboard](https://www.twilio.com/console)
     - `TWILIO_NUMBER`: Get Twilio Number in the [Twilio Console Dashboard](https://www.twilio.com/console)

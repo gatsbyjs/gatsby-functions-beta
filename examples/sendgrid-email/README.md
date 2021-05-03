@@ -11,7 +11,7 @@
 
 1.  **Get SendGrid Credentials.**
 
-    There are **2** environment variable you'll need to add your project to propertly run the starter:
+    There are **2** environment variable you'll need to add your project to properly run the starter:
     - `SENDGRID_API_KEY`: Get SendGrid API Key. [SendGrid Docs](https://sendgrid.com/docs/ui/account-and-settings/api-keys/)
     - `SENDGRID_AUTHORIZED_EMAIL`: Set the email address authorized with SendGrid [SendGrid Docs](https://sendgrid.com/docs/glossary/sender-authentication/)
 

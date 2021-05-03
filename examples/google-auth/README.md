@@ -12,7 +12,7 @@
 
 1.  **Set up Google OAuth Client.**
     
-    This sample uses google oAuth client to authenticate into google inbox api. To receive the proper token information, an oAuth credential in the [API & Services Credentails Page](https://console.cloud.google.com/apis/credentials?)
+    This sample uses google oAuth client to authenticate into the Google inbox api. To receive the proper token information, an oAuth credential in the [API & Services Credentails Page](https://console.cloud.google.com/apis/credentials?)
     - Set up your project in the google api console. You can follow the instructions highlighted in Google Account Authentication tutorial [here](https://theoephraim.github.io/node-google-spreadsheet/#/getting-started/authentication)
     - Generate an Oauth Client ID. You can follow the steps highlighted in [Account Authentication - Service Account](https://theoephraim.github.io/node-google-spreadsheet/#/getting-started/authentication?id=oauth). Make sure to set up at least one **Authorized redirect URI** to be `http://localhost:8000`
     - Grant your project [Gmail API](https://console.cloud.google.com/apis/api/gmail.googleapis.com) access

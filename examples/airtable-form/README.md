@@ -11,7 +11,7 @@
 
 1.  **Get Airtable Credentials.**
 
-    There are **2** environment variable you'll need to add your project to propertly run the starter:
+    There are **2** environment variable you'll need to add your project to properly run the starter:
     - `AIRTABLE_KEY`: Get Airtable API Key. [Airtable Docs](https://support.airtable.com/hc/en-us/articles/219046777-How-do-I-get-my-API-key-)
     - `AIRTABLE_DB`: Get the ID for the Base in interactive Airtable API docs. [Airtable Docs](https://airtable.com/api)
 
