@@ -1,48 +1,59 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
+  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=gatsby-functions-beta">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby minimal starter
+  Gatsby Functions Airtable Form Starter
 </h1>
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+1.  **Get Airtable Credentials.**
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+    There are **2** environment variable you'll need to add your project to propertly run the starter:
+    - `AIRTABLE_KEY`: Get Airtable API Key. [Airtable Docs](https://support.airtable.com/hc/en-us/articles/219046777-How-do-I-get-my-API-key-)
+    - `AIRTABLE_DB`: Get the ID for the Base in interactive Airtable API docs. [Airtable Docs](https://airtable.com/api)
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+    You'll want to add these as environment variables when deploying to Gatsby Cloud. Don't forget to add them to the Preview variables if you plan to add a CMS preview integration. 
+
 
 2.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+    To get started, run `yarn` to add all necessary packages.
+
+    When developing locally, you'll want to include the ENV variables in your .`env.development`. Read more about how Gatsby handles `.env` files and environment variables in the [Gatbsy Docs](https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables/)
+
 
     ```shell
-    cd my-gatsby-site/
-    npm run develop
+    cd airtable-form
+    yarn run develop
     ```
 
 3.  **Open the code and start customizing!**
 
-    Your site is now running at http://localhost:8000!
+    Your site is now running at http://localhost:8000! You can use the UI on the index page to test the functions or directly access them at http://localhost:8000/api/airtable
+
+    For this route, hitting the route with a POST request with the following body should submit a form response to your Airtable base:
+
+    ```json
+      {
+        "name": "Sample Name",
+        "email": "sample@example.com",
+        "message": "Hello, World!"
+      }
+    ```
 
     Edit `src/pages/index.js` to see your site update in real-time!
 
-4.  **Learn more**
+4.  **Deploy**
+You can directly deploy this starter by using the Deploy button below and select the directory for the Airtable example. Otherwise, fork this repo and create your own repo and [connect that to Gatsby Cloud](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-gatsby-cloud/#set-up-an-existing-gatsby-site).
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+[<img src="https://www.gatsbyjs.com/deploynow.svg">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-functions-beta/)
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+<!--- Working on improving deploy now to use subdirectories 
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+[<img src="https://www.gatsbyjs.com/deploynow.svg">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-functions-beta/tree/main/examples/airtable-form)
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+--> 
