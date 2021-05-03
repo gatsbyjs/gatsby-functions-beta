@@ -1,10 +1,10 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=gatsby-functions-starter-alpha">
+  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=gatsby-functions-beta">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby functions Google Sheets starter
+  Gatsby Functions Google Sheets Starter
 </h1>
 
 ## 🚀 Quick start
@@ -27,19 +27,28 @@
 
     To get started, run `yarn` to add all necessary packages.
 
-    When developing locally, you'll want to include the ENV variables inline with your `yarn run develop` command.
+    When developing locally, you'll want to include the ENV variables in your .`env.development`. Read more about how Gatsby handles `.env` files and environment variables in the [Gatbsy Docs](https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables/)
 
     ```shell
     cd google-sheets
-    GOOGLE_SHEET_ID={your-sheet-id-here} yarn run develop
+    yarn
+    yarn run develop
     ```
 
 4.  **Open the code and start customizing!**
 
-    Your site is now running at http://localhost:8000! You can use the UI on the index page to test the functions or directly access them at http://localhost:8000/api/twilio
+    Your site is now running at http://localhost:8000! You can use the UI on the index page to test the functions or directly access them at http://localhost:8000/api/{function_name}
 
     Edit `src/pages/index.js` to see your site update in real-time!
 
 5.  **Deploy**
+    You can directly deploy this starter by using the Deploy button below and select the directory for the Google Sheets example. Otherwise, fork this repo and create your own repo and [connect that to Gatsby Cloud](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-gatsby-cloud/#set-up-an-existing-gatsby-site).
 
-  [<img src="https://www.gatsbyjs.com/deploynow.svg">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-functions-starter-alpha)
+    [<img src="https://www.gatsbyjs.com/deploynow.svg">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-functions-beta/)
+
+
+    <!--- Working on improving deploy now to use subdirectories 
+
+    [<img src="https://www.gatsbyjs.com/deploynow.svg">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-functions-beta/tree/main/examples/google-auth)
+
+    --> 
