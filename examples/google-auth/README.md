@@ -12,26 +12,26 @@
 
 1.  **Set up Google OAuth Client.**
     
-    This sample uses google oAuth client to authenticate into the Google inbox api. To receive the proper token information, an oAuth credential in the [API & Services Credentails Page](https://console.cloud.google.com/apis/credentials?)
-    - Set up your project in the google api console. You can follow the instructions highlighted in Google Account Authentication tutorial [here](https://theoephraim.github.io/node-google-spreadsheet/#/getting-started/authentication)
+    This sample uses google oAuth client to authenticate into the Google inbox api. Obtain an oAuth credential from the Google Cloud [API & Services Credentails Page](https://console.cloud.google.com/apis/credentials?)
     - Generate an Oauth Client ID. You can follow the steps highlighted in [Account Authentication - Service Account](https://theoephraim.github.io/node-google-spreadsheet/#/getting-started/authentication?id=oauth). Make sure to set up at least one **Authorized redirect URI** to be `http://localhost:8000`
-    - Grant your project [Gmail API](https://console.cloud.google.com/apis/api/gmail.googleapis.com) access
+    - Enable the [Gmail API](https://console.cloud.google.com/apis/api/gmail.googleapis.com) in your Google Cloud project.
 
 
-2.  **Get Google Oauth Credentials.**
+2.  **Add the Google Oauth Credentials to your `.env.development` file**
 
-    There are **2** environment variable you'll need to add your project to propertly run the starter:
+    There are **2** environment variable you'll need to add to your project:
+
     - `GOOGLE_CLIENT_ID`: Fetch the ClientId from the newly created OAuth 2.0 Client ID. Yuo can find it in the [Google Credentials Console](https://console.cloud.google.com/apis/credentials)
-    - `COOGLE_CLIENT_SECRET`: Fetch the Client Secret from the newly created OAuth 2.0 Client ID. Yuo can find it in the [Google Credentials Console](https://console.cloud.google.com/apis/credentials)
+    - `GOOGLE_CLIENT_SECRET`: Fetch the Client Secret from the newly created OAuth 2.0 Client ID. Yuo can find it in the [Google Credentials Console](https://console.cloud.google.com/apis/credentials)
 
-    You'll want to add these as environment variables when deploying to Gatsby Cloud. Don't forget to add them to the Preview variables if you plan to add a CMS preview integration. 
+    You'll also want to add these as environment variables when deploying to Gatsby Cloud. 
 
 
 2.  **Start developing.**
 
     To get started, run `yarn` to add all necessary packages.
 
-    When developing locally, you'll want to include the ENV variables in your `.env.development`. Read more about how Gatsby handles `.env` files and environment variables in the [Gatbsy Docs](https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables/)
+    When developing locally, you include environment variables to your `.env.development`. Read more about how Gatsby handles `.env` files and environment variables in the [Gatsby Docs](https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables/)
 
     ```shell
     cd google-auth
