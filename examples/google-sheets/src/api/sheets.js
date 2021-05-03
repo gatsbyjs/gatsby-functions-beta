@@ -8,7 +8,7 @@ const handler = async (req, res) => {
         }
 
         const doc = new GoogleSpreadsheet(
-            process.env.GATSBY_GOOGLE_SHEET_ID
+            process.env.GOOGLE_SHEET_ID
         );
 
         await doc.useServiceAccountAuth(creds);

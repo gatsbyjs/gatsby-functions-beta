@@ -3,7 +3,7 @@ const sendgrid = require('@sendgrid/mail');
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 const message = {
   //Your authorized email from SendGrid
-  from: process.env.SENDGRID_API_EMAIL
+  from: process.env.SENDGRID_AUTHORIZED_EMAIL
 }
 
 const handler = (req, res) => {
