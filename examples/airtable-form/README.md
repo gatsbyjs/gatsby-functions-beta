@@ -9,11 +9,15 @@
 
 ## 🚀 Quick start
 
+1. Setup Airtable
+
+    Create a new base named `Submissions` and create a table with three columns, "Name", "Email", and "Message".
+
 1.  **Get Airtable Credentials.**
 
     There are **2** environment variable you'll need to add your project to properly run the starter:
     - `AIRTABLE_KEY`: Get Airtable API Key. [Airtable Docs](https://support.airtable.com/hc/en-us/articles/219046777-How-do-I-get-my-API-key-)
-    - `AIRTABLE_DB`: Get the ID for the Base in interactive Airtable API docs. [Airtable Docs](https://airtable.com/api)
+    - `AIRTABLE_DB`: Get the ID for the "Submissions" Base in interactive Airtable API docs. [Airtable Docs](https://airtable.com/api)
 
     You'll want to add these as environment variables when deploying to Gatsby Cloud. Don't forget to add them to the Preview variables if you plan to add a CMS preview integration. 
 
