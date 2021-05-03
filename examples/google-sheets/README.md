@@ -10,17 +10,17 @@
 ## 🚀 Quick start
 
 1.  **Get Google Authentication Token.**
-  This sample uses the google service account to authenticate into google spreadhseets api. To receive the proper token information, you'll need to set up an account in the <TODO> page
-  - Set up your project in the google api console. You can follow the instructions highlighted in Google Account Authentication tutorial [here](https://theoephraim.github.io/node-google-spreadsheet/#/getting-started/authentication)
-  - Generate a service account and download the access token. You can follow the steps highlighted in [Account Authentication - Service Account](https://theoephraim.github.io/node-google-spreadsheet/#/getting-started/authentication?id=service-account)
-  - Move the downloaded access token into `src/config/token.json`
+    This sample uses the google service account to authenticate into google spreadhseets api. To receive the proper token information, you'll need to set up an account in the <TODO> page
+    - Set up your project in the google api console. You can follow the instructions highlighted in Google Account Authentication tutorial [here](https://theoephraim.github.io/node-google-spreadsheet/#/getting-started/authentication)
+    - Generate a service account and download the access token. You can follow the steps highlighted in [Account Authentication - Service Account](https://theoephraim.github.io/node-google-spreadsheet/#/getting-started/authentication?id=service-account)
+    - Move the downloaded access token into `src/config/token.json`
 
 
-1.  **Create a Test Spreadsheet.**
+2.  **Create a Test Spreadsheet.**
 
-  - Generate a new spreadsheet via [Google Sheets](https://docs.google.com/spreadsheets)
-  - Grant owner access to the spreadsheet to your service account. You can find the service account in the [Cloud Console]() after generating a service acount.
-  - You will need the Sheet ID to propertly run the starter. Sheet ID can be found in the URL of a Google spreadsheet. For example, you can find it via" `https://docs.google.com/spreadsheets/d/<GOOGLE_SHEET_ID>/`.
+    - Generate a new spreadsheet via [Google Sheets](https://docs.google.com/spreadsheets)
+    - Grant owner access to the spreadsheet to your service account. You can find the service account in the [Cloud Console]() after generating a service acount.
+    - You will need the Sheet ID to propertly run the starter. Sheet ID can be found in the URL of a Google spreadsheet. For example, you can find it via" `https://docs.google.com/spreadsheets/d/<GOOGLE_SHEET_ID>/`.
 
 
 3.  **Start developing.**
