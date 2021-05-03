@@ -22,7 +22,7 @@
 
     To get started, run `yarn` to add all necessary packages.
 
-    When developing locally, you'll want to include the ENV variables in your .`env.development`. Read more about how Gatsby handles `.env` files and environment variables in the [Gatbsy Docs](https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables/)
+    When developing locally, you'll want to include the ENV variables in your `.env.development`. Read more about how Gatsby handles `.env` files and environment variables in the [Gatbsy Docs](https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables/)
 
 
     ```shell
