@@ -20,8 +20,8 @@
 2.  **Get Google Oauth Credentials.**
 
     There are **2** environment variable you'll need to add your project to propertly run the starter:
-    - `GATSBY_GOOGLE_CLIENT_ID`: Fetch the ClientId from the newly created OAuth 2.0 Client ID. Yuo can find it in the [Google Credentials Console](https://console.cloud.google.com/apis/credentials)
-    - `GATSBY_COOGLE_CLIENT_SECRET`: Fetch the Client Secret from the newly created OAuth 2.0 Client ID. Yuo can find it in the [Google Credentials Console](https://console.cloud.google.com/apis/credentials)
+    - `GOOGLE_CLIENT_ID`: Fetch the ClientId from the newly created OAuth 2.0 Client ID. Yuo can find it in the [Google Credentials Console](https://console.cloud.google.com/apis/credentials)
+    - `COOGLE_CLIENT_SECRET`: Fetch the Client Secret from the newly created OAuth 2.0 Client ID. Yuo can find it in the [Google Credentials Console](https://console.cloud.google.com/apis/credentials)
 
     You'll want to add these as environment variables when deploying to Gatsby Cloud. Don't forget to add them to the Preview variables if you plan to add a CMS preview integration. 
 
@@ -30,7 +30,7 @@
 
     To get started, run `yarn` to add all necessary packages.
 
-    When developing locally, you'll want to include the ENV variables inline with your `yarn run develop` command (i.e. `GATSBY_GOOGLE_CLIENT_ID="<google-client-id>" GATSBY_COOGLE_CLIENT_SECRET="<google-client-secret>" yarn run develop`).
+    When developing locally, you'll want to include the ENV variables inline with your `yarn run develop` command (i.e. `GOOGLE_CLIENT_ID="<google-client-id>" COOGLE_CLIENT_SECRET="<google-client-secret>" yarn run develop`).
 
 
     ```shell
