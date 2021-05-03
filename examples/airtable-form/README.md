@@ -27,6 +27,7 @@
 
     ```shell
     cd airtable-form
+    yarn
     yarn run develop
     ```
 
