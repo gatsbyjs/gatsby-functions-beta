@@ -11,7 +11,7 @@
 
 1.  **Get Google Authentication Token.**
     
-    This sample uses the google service account to authenticate into google spreadhseets api. To receive the proper token information, you'll need to set up an account in the <TODO> page
+    This sample uses the google service account to authenticate into google spreadhseets api. To receive the proper token information, you'll need to set up an account in the [Google API Console](https://console.cloud.google.com/apis/dashboard).
     - Set up your project in the google api console. You can follow the instructions highlighted in Google Account Authentication tutorial [here](https://theoephraim.github.io/node-google-spreadsheet/#/getting-started/authentication)
     - Generate a service account and download the access token. You can follow the steps highlighted in [Account Authentication - Service Account](https://theoephraim.github.io/node-google-spreadsheet/#/getting-started/authentication?id=service-account)
     - Move the downloaded access token into `src/config/token.json`
