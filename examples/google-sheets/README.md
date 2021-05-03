@@ -20,7 +20,7 @@
 
   - Generate a new spreadsheet via [Google Sheets](https://docs.google.com/spreadsheets)
   - Grant owner access to the spreadsheet to your service account. You can find the service account in the [Cloud Console]() after generating a service acount.
-  - You will need the Sheet ID to propertly run the starter. Sheet ID can be found in the URL of a Google spreadsheet. For example, you can find it via" `https://docs.google.com/spreadsheets/d/<GATSBY_GOOGLE_SHEET_ID>/`.
+  - You will need the Sheet ID to propertly run the starter. Sheet ID can be found in the URL of a Google spreadsheet. For example, you can find it via" `https://docs.google.com/spreadsheets/d/<GOOGLE_SHEET_ID>/`.
 
 
 3.  **Start developing.**
@@ -31,7 +31,7 @@
 
     ```shell
     cd google-sheets
-    GATSBY_GOOGLE_SHEET_ID={your-sheet-id-here} yarn run develop
+    GOOGLE_SHEET_ID={your-sheet-id-here} yarn run develop
     ```
 
 4.  **Open the code and start customizing!**
