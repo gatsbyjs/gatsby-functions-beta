@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby functions Google auth starter
+  Gatsby Functions Google Auth Starter
 </h1>
 
 
@@ -30,11 +30,11 @@
 
     To get started, run `yarn` to add all necessary packages.
 
-    When developing locally, you'll want to include the ENV variables inline with your `yarn run develop` command (i.e. `GOOGLE_CLIENT_ID="<google-client-id>" COOGLE_CLIENT_SECRET="<google-client-secret>" yarn run develop`).
-
+    When developing locally, you'll want to include the ENV variables in your .`env.development`. Read more about how Gatsby handles `.env` files and environment variables in the [Gatbsy Docs](https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables/)
 
     ```shell
     cd google-auth
+    yarn
     yarn run develop
     ```
 
@@ -45,5 +45,11 @@
     Edit `src/pages/index.js` to see your site update in real-time!
 
 4.  **Deploy**
+    You can directly deploy this starter by using the Deploy button below and select the directory for the Airtable example. Otherwise, fork this repo and create your own repo and [connect that to Gatsby Cloud](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-gatsby-cloud/#set-up-an-existing-gatsby-site).
 
-  [<img src="https://www.gatsbyjs.com/deploynow.svg">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-functions-starter-alpha)
+    [<img src="https://www.gatsbyjs.com/deploynow.svg">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-functions-beta/)
+
+
+    <!--- Working on improving deploy now to use subdirectories 
+
+    [<img src="https://www.gatsbyjs.com/deploynow.svg">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-functions-beta/tree/main/examples/airtable-form)
