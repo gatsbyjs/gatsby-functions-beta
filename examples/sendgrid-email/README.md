@@ -38,4 +38,4 @@
 
 4.  **Deploy**
 
-  [<img src="https://www.gatsbyjs.com/deploynow.svg">](https://github.com/gatsbyjs/gatsby-functions-beta/tree/main/examples/sendgrid-email)
+  [<img src="https://www.gatsbyjs.com/deploynow.svg">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-functions-beta/tree/main/examples/sendgrid-email)
