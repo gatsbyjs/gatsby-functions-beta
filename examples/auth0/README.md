@@ -11,7 +11,7 @@ This code was inspired by this [article](https://sandrino.dev/blog/securing-netl
 
 The Gatsby application uses [@auth0/auth0-react](https://github.com/auth0/auth0-react) to authenticate the user. Once the user is authenticated, the Gatsby application will receive an `id_token` and `access_token` from Auth0;
 
-The `access_token` is then provided to our Netlify Functions to authenticate the request.
+The `access_token` is then provided to our Functions to authenticate the request.
 
 ### Gatsby Hosting Functions
 
