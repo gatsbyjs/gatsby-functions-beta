@@ -30,4 +30,3 @@ You can directly deploy this starter by using the Deploy button below and select
 [<img src="https://www.gatsbyjs.com/deploynow.svg">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-functions-beta/tree/main/examples/hello-world)
 
 --> 
->>>>>>> origin/main
