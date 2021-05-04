@@ -11,18 +11,20 @@
 
 1.  **Get SendGrid Credentials.**
 
-    There are **2** environment variable you'll need to add your project to properly run the starter:
+    Create an account on [SendGrid](https://sendgrid.com/) and verify a "single sender" email address that the function will use for sending emails.
 
-    - `SENDGRID_API_KEY`: Get SendGrid API Key. [SendGrid Docs](https://sendgrid.com/docs/ui/account-and-settings/api-keys/)
-    - `SENDGRID_AUTHORIZED_EMAIL`: Set the email address authorized with SendGrid [SendGrid Docs](https://sendgrid.com/docs/glossary/sender-authentication/)
+    Add the following **2** environment variables to your a file named `.env.development`. You'll need these for the function to be able to send emails:
 
-    You'll want to add these as environment variables when deploying to Gatsby Cloud. Don't forget to add them to the Preview variables if you plan to add a CMS preview integration.
+    - `SENDGRID_API_KEY`: An SendGrid API Key with full access. [SendGrid Docs](https://sendgrid.com/docs/ui/account-and-settings/api-keys/)
+    - `SENDGRID_AUTHORIZED_EMAIL`: the "single sender" the email address you verified with SendGrid [SendGrid Docs](https://sendgrid.com/docs/glossary/sender-authentication/)
+
+    Read more about how Gatsby handles `.env` files and environment variables in the [Gatbsy Docs](https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables/)
+
+    You'll also want to add these as environment variables when deploying to Gatsby Cloud. Don't forget to add them to the Preview variables if you plan to add a CMS preview integration.
 
 2.  **Start developing.**
 
-    To get started, run `yarn` to add all necessary packages.
-
-    When developing locally, you'll want to include the ENV variables in your `.env.development`. Read more about how Gatsby handles `.env` files and environment variables in the [Gatbsy Docs](https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables/)
+    To get started, run `yarn` to install all necessary packages.
 
     ```shell
     cd sendgrid-email

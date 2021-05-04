@@ -13,7 +13,7 @@ const handler = (req, res) => {
     }
 
     if (req.body) {
-      message.to = req.body.to
+      message.to = req.body.email
       message.subject = req.body.subject
       message.text = req.body.text
       message.html = req.body.text
