@@ -78,7 +78,6 @@ const badgeStyle = {
   lineHeight: 1,
 }
 
-
 // markup
 const IndexPage = () => {
   return (
@@ -101,13 +100,10 @@ const IndexPage = () => {
       </p>
       <ul style={listStyles}>
         <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`/api/hello-world`}
-          >
+          <a style={linkStyle} href={`/api/hello-world`}>
             Visit your sample API route!
           </a>
-        </li>      
+        </li>
       </ul>
       <img
         alt="Gatsby G Logo"

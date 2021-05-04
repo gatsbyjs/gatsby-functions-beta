@@ -1,36 +1,36 @@
-import React, { useState } from "react";
-import { useAuth0 } from "@auth0/auth0-react";
+import React, { useState } from "react"
+import { useAuth0 } from "@auth0/auth0-react"
 
-import Layout from "../components/layout";
+import Layout from "../components/layout"
 
 export default function Home() {
-  const [response, setResponse] = useState();
-  const { getAccessTokenSilently, isLoading, error, user } = useAuth0();
+  const [response, setResponse] = useState()
+  const { getAccessTokenSilently, isLoading, error, user } = useAuth0()
 
-  const callApi = async (path) => {
+  const callApi = async path => {
     try {
-      setResponse("Loading...");
+      setResponse("Loading...")
 
       const token = await getAccessTokenSilently({
         audience: process.env.GATSBY_AUTH0_AUDIENCE,
-      });
+      })
 
       const api = await fetch("/api/" + path, {
         headers: {
           authorization: "Bearer " + token,
         },
-      });
+      })
 
-      const body = await api.json();
+      const body = await api.json()
       setResponse({
         status: api.status,
         statusText: api.statusText,
         body,
-      });
+      })
     } catch (e) {
-      setResponse(e.message);
+      setResponse(e.message)
     }
-  };
+  }
 
   return (
     <Layout>
@@ -83,5 +83,5 @@ export default function Home() {
         )}
       </div>
     </Layout>
-  );
+  )
 }

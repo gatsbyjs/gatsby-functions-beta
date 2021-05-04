@@ -5,7 +5,5 @@ module.exports = {
   siteMetadata: {
     title: "Google Auth",
   },
-  plugins: [
-    "gatsby-plugin-gatsby-cloud"
-  ],
-};
+  plugins: ["gatsby-plugin-gatsby-cloud"],
+}
