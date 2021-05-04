@@ -6,4 +6,4 @@ module.exports = {
     title: "Airtable Form",
   },
   plugins: ["gatsby-plugin-gatsby-cloud"],
-};
+}

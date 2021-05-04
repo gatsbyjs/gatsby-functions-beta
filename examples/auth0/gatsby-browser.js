@@ -1,10 +1,10 @@
-import React from "react";
-import { navigate } from "gatsby";
-import { Auth0Provider } from "@auth0/auth0-react";
+import React from "react"
+import { navigate } from "gatsby"
+import { Auth0Provider } from "@auth0/auth0-react"
 
-import "./src/styles/site.css";
+import "./src/styles/site.css"
 
-const onRedirectCallback = (appState) => navigate(appState?.returnTo || "/");
+const onRedirectCallback = appState => navigate(appState?.returnTo || "/")
 
 export const wrapRootElement = ({ element }) => {
   return (
@@ -18,5 +18,5 @@ export const wrapRootElement = ({ element }) => {
     >
       {element}
     </Auth0Provider>
-  );
-};
+  )
+}

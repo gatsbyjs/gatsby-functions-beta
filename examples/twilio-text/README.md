@@ -12,12 +12,12 @@
 1.  **Get TwilioCredentials.**
 
     There are **3** environment variable you'll need to add your project to properly run the starter:
+
     - `TWILIO_ACCOUNT_SID`: Get Twilio Account SID in the [Twilio Console Dashboard](https://www.twilio.com/console)
     - `TWILIO_AUTH_TOKEN`: Get Twilio Auth Token in the [Twilio Console Dashboard](https://www.twilio.com/console)
     - `TWILIO_NUMBER`: Get Twilio Number in the [Twilio Console Dashboard](https://www.twilio.com/console)
 
-    You'll want to add these as environment variables when deploying to Gatsby Cloud. Don't forget to add them to the Preview variables if you plan to add a CMS preview integration. 
-
+    You'll want to add these as environment variables when deploying to Gatsby Cloud. Don't forget to add them to the Preview variables if you plan to add a CMS preview integration.
 
 2.  **Start developing.**
 
@@ -37,11 +37,11 @@
 
     Edit `src/pages/index.js` to see your site update in real-time!
 
-3. **Deploy**
+4.  **Deploy**
 
 You can deploy this example on Gatsby Cloud by copying the example into a new repo and [connecting that to Gatsby Cloud](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-gatsby-cloud/#set-up-an-existing-gatsby-site).
 
-<!--- Working on improving deploy now to use subdirectories 
+<!--- Working on improving deploy now to use subdirectories
 4.  **Deploy**
 
     You can directly deploy this starter by using the Deploy button below and select the directory for the Twilio example. Otherwise, fork this repo and create your own repo and [connect that to Gatsby Cloud](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-gatsby-cloud/#set-up-an-existing-gatsby-site).
@@ -52,4 +52,4 @@ You can deploy this example on Gatsby Cloud by copying the example into a new re
 
     [<img src="https://www.gatsbyjs.com/deploynow.svg">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-functions-beta/tree/main/examples/twilio-text)
 
-    --> 
+    -->
