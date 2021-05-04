@@ -13,7 +13,7 @@
 
    Create a new base named `Submissions` and create a table with three columns, "Name", "Email", and "Message".
 
-1. **Get Airtable Credentials.**
+2. **Get Airtable Credentials.**
 
    There are **2** environment variable you'll need to add your project to properly run the starter:
 
@@ -22,7 +22,7 @@
 
    You'll want to add these as environment variables when deploying to Gatsby Cloud. Don't forget to add them to the Preview variables if you plan to add a CMS preview integration.
 
-1. **Start developing.**
+3. **Start developing.**
 
    To get started, run `yarn` to add all necessary packages.
 
@@ -34,7 +34,7 @@
    yarn run develop
    ```
 
-1. **Open the code and start customizing!**
+4. **Open the code and start customizing!**
 
    Your site is now running at http://localhost:8000! You can use the UI on the index page to test the functions or directly access them at http://localhost:8000/api/airtable
 
@@ -50,7 +50,7 @@
 
    Edit `src/pages/index.js` to see your site update in real-time!
 
-1. **Deploy**
+5. **Deploy**
 
 You can deploy this example on Gatsby Cloud by copying the example into a new repo and [connecting that to Gatsby Cloud](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-gatsby-cloud/#set-up-an-existing-gatsby-site).
 
