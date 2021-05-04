@@ -38,8 +38,9 @@ export default function Home() {
         <h2 className="text-xl mb-3">Authenticating with Auth0</h2>
         {!isLoading && !user ? (
           <p className="mb-3">
-            Before being able to call an API your user will need to authenticate
-            first. Go ahead and click the <strong>Login</strong>
+            Before your user can call an API, they need to authenticate. Go
+            ahead and click the <strong>Login</strong>
+            {` `}
             button on the top right.
           </p>
         ) : (
@@ -53,8 +54,8 @@ export default function Home() {
         </pre>
         <h2 className="text-xl mb-3">Calling a Gatsby Hosted Function</h2>
         <p className="mb-3">
-          Then once the user is authenticated, calling the API will be possible.
-          If you try this without authenticating, you&#39;ll get an error.
+          Once the user is authenticated, you can call the API. If you try this
+          without authenticating, you&#39;ll get an error.
         </p>
         <button
           className="mr-3 mb-1 text-white bg-gray-600 border-0 py-1 px-3 focus:outline-none hover:bg-gray-800 rounded text-base md:mt-0"
