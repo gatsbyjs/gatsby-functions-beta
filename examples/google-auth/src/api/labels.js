@@ -40,7 +40,7 @@ function listLabels(auth) {
 
 const handler = async (req, res) => {
   try {
-    let token = "";
+    let token = ""
     if (req.body) {
       token = req.headers.tokenstring
     }
@@ -62,6 +62,6 @@ const handler = async (req, res) => {
     console.log(err)
     return res.status(500).json({ message: "There was an error", error: err })
   }
-};
+}
 
 module.exports = handler

@@ -3,6 +3,7 @@
 This example shows how to use [@serverless-jwt](https://github.com/sandrinodimattia/serverless-jwt) with Gatsby and Gatsby Hosted Functions.
 
 ## Inspiration
+
 This code was inspired by this [article](https://sandrino.dev/blog/securing-netlify-functions-with-serverless-jwt) and [repo](https://github.com/sandrinodimattia/serverless-jwt).
 
 ## How does example this work?
@@ -23,23 +24,23 @@ The `JwtVerifier` serves as a way to verify your token. If the token is not vali
 const {
   JwtVerifier,
   getTokenFromHeader,
-} = require("@serverless-jwt/jwt-verifier");
+} = require("@serverless-jwt/jwt-verifier")
 
 const jwt = new JwtVerifier({
   issuer: process.env.JWT_ISSUER,
   audience: process.env.JWT_AUDIENCE,
-});
+})
 
 const shows = async (req, res) => {
-  const scope = "read:shows";
-  const token = getTokenFromHeader(req.get("authorization"));
-  const claims = await jwt.verifyAccessToken(token);
+  const scope = "read:shows"
+  const token = getTokenFromHeader(req.get("authorization"))
+  const claims = await jwt.verifyAccessToken(token)
 
   if (!claims || !claims.scope || claims.scope.indexOf(scope) === -1) {
     return res.status(403).json({
       error: "access_denied",
       error_description: `Token does not contain the required '${scope}' scope`,
-    });
+    })
   }
 }
 ```

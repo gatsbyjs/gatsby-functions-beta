@@ -11,52 +11,50 @@
 
 1. Setup Airtable
 
-    Create a new base named `Submissions` and create a table with three columns, "Name", "Email", and "Message".
+   Create a new base named `Submissions` and create a table with three columns, "Name", "Email", and "Message".
 
-1.  **Get Airtable Credentials.**
+1. **Get Airtable Credentials.**
 
-    There are **2** environment variable you'll need to add your project to properly run the starter:
-    - `AIRTABLE_KEY`: Get Airtable API Key. [Airtable Docs](https://support.airtable.com/hc/en-us/articles/219046777-How-do-I-get-my-API-key-)
-    - `AIRTABLE_DB`: Get the ID for the "Submissions" Base in interactive Airtable API docs. [Airtable Docs](https://airtable.com/api)
+   There are **2** environment variable you'll need to add your project to properly run the starter:
 
-    You'll want to add these as environment variables when deploying to Gatsby Cloud. Don't forget to add them to the Preview variables if you plan to add a CMS preview integration. 
+   - `AIRTABLE_KEY`: Get Airtable API Key. [Airtable Docs](https://support.airtable.com/hc/en-us/articles/219046777-How-do-I-get-my-API-key-)
+   - `AIRTABLE_DB`: Get the ID for the "Submissions" Base in interactive Airtable API docs. [Airtable Docs](https://airtable.com/api)
 
+   You'll want to add these as environment variables when deploying to Gatsby Cloud. Don't forget to add them to the Preview variables if you plan to add a CMS preview integration.
 
-2.  **Start developing.**
+1. **Start developing.**
 
-    To get started, run `yarn` to add all necessary packages.
+   To get started, run `yarn` to add all necessary packages.
 
-    When developing locally, you'll want to include the ENV variables in your `.env.development`. Read more about how Gatsby handles `.env` files and environment variables in the [Gatbsy Docs](https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables/)
+   When developing locally, you'll want to include the ENV variables in your `.env.development`. Read more about how Gatsby handles `.env` files and environment variables in the [Gatbsy Docs](https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables/)
 
+   ```shell
+   cd airtable-form
+   yarn
+   yarn run develop
+   ```
 
-    ```shell
-    cd airtable-form
-    yarn
-    yarn run develop
-    ```
+1. **Open the code and start customizing!**
 
-3.  **Open the code and start customizing!**
+   Your site is now running at http://localhost:8000! You can use the UI on the index page to test the functions or directly access them at http://localhost:8000/api/airtable
 
-    Your site is now running at http://localhost:8000! You can use the UI on the index page to test the functions or directly access them at http://localhost:8000/api/airtable
+   For this route, hitting the route with a POST request with the following body should submit a form response to your Airtable base:
 
-    For this route, hitting the route with a POST request with the following body should submit a form response to your Airtable base:
+   ```json
+   {
+     "name": "Sample Name",
+     "email": "sample@example.com",
+     "message": "Hello, World!"
+   }
+   ```
 
-    ```json
-      {
-        "name": "Sample Name",
-        "email": "sample@example.com",
-        "message": "Hello, World!"
-      }
-    ```
+   Edit `src/pages/index.js` to see your site update in real-time!
 
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-
-4. **Deploy**
+1. **Deploy**
 
 You can deploy this example on Gatsby Cloud by copying the example into a new repo and [connecting that to Gatsby Cloud](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-gatsby-cloud/#set-up-an-existing-gatsby-site).
 
-<!--- Working on improving deploy now to use subdirectories 
+<!--- Working on improving deploy now to use subdirectories
 4.  **Deploy**
 You can directly deploy this starter by using the Deploy button below and select the directory for the Airtable example. Otherwise, fork this repo and create your own repo and [connect that to Gatsby Cloud](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-gatsby-cloud/#set-up-an-existing-gatsby-site).
 
@@ -66,4 +64,4 @@ You can directly deploy this starter by using the Deploy button below and select
 
 [<img src="https://www.gatsbyjs.com/deploynow.svg">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-functions-beta/tree/main/examples/airtable-form)
 
---> 
+-->

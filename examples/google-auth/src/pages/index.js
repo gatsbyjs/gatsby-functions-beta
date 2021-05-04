@@ -54,11 +54,11 @@ export default class IndexPage extends Component {
         </div>
       )
     }
-    return null;
+    return null
   }
 
   getLabelsBox() {
-    var labels = [];
+    var labels = []
 
     labels.push(
       <div>
@@ -69,7 +69,7 @@ export default class IndexPage extends Component {
       labels.push(<div>- {label}</div>)
     })
 
-    return labels;
+    return labels
   }
   render() {
     var urlParams = new URLSearchParams(window.location.search)
@@ -120,6 +120,6 @@ export default class IndexPage extends Component {
           {this.getLabelsBox()}
         </div>
       </main>
-    );
+    )
   }
 }
