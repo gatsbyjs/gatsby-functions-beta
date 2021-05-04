@@ -2,7 +2,7 @@ const url = require("url")
 const { google } = require("googleapis")
 
 const clientId = process.env.GOOGLE_CLIENT_ID
-const clientSecret = process.env.COOGLE_CLIENT_SECRET
+const clientSecret = process.env.GOOGLE_CLIENT_SECRET
 
 const oauth2Client = new google.auth.OAuth2(
   clientId,
