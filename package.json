@@ -5,6 +5,20 @@
   "description": "Functions Starters",
   "author": "Joel Smith",
   "keywords": [
-    "gatsby", "gatsby functions", "gatsby starters"
-  ]
+    "gatsby",
+    "gatsby functions",
+    "gatsby starters"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "prettier": "^2.2.1"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
+  },
+  "scripts": {
+    "prepare": "husky install"
+  }
 }

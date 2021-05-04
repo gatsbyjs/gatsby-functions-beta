@@ -1,8 +1,8 @@
-import React from "react";
-import { useAuth0 } from "@auth0/auth0-react";
+import React from "react"
+import { useAuth0 } from "@auth0/auth0-react"
 
 const Header = () => {
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  const { isAuthenticated, loginWithRedirect, logout } = useAuth0()
 
   return (
     <header className="bg-gray-100 text-gray-700 body-font border-b">
@@ -48,7 +48,7 @@ const Header = () => {
         )}
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

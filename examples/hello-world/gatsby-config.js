@@ -6,4 +6,4 @@ module.exports = {
     title: "Hello World",
   },
   plugins: ["gatsby-plugin-gatsby-cloud"],
-};
+}

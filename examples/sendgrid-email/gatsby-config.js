@@ -3,4 +3,4 @@ module.exports = {
     title: "Sendgrid Email",
   },
   plugins: ["gatsby-plugin-gatsby-cloud"],
-};
+}
