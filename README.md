@@ -39,13 +39,13 @@
 
 ## 🚀 Using the Starters
 
-1.  **Browse Starters.**
+1.  **Browse Example.**
 
-    Visit our starter gallery or browse the examples folder included here. You'll find a variety of examples including how to submit forms, send emails, and how to handle authentication.
+    Browse the examples folder included here. You'll find a variety of examples including how to submit forms, send emails, and how to handle authentication.
 
 2.  **Deploy to Gatsby Cloud.**
 
-    On each starter's README, you'll find a button easily deploy the project to Gatsby Cloud. Add any necessary API keys for that starter and you'll have an example up in minutes!
+    On each starter's README, you'll find instrucitons on how to deploy the project to Gatsby Cloud. Add any necessary API keys for that starter and you'll have an example up in minutes!
 
 
 3.  **Build! Iterate! Ship!**
