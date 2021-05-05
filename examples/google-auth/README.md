@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby Functions Google Auth Starter
+  Gatsby Functions Google Auth Examples
 </h1>
 
 ## 🚀 Quick start
@@ -50,7 +50,7 @@ You can deploy this example on Gatsby Cloud by copying the example into a new re
 <!--- Working on improving deploy now to use subdirectories
 
 4.  **Deploy**
-    You can directly deploy this starter by using the Deploy button below and select the directory for the Google Auth example. Otherwise, fork this repo and create your own repo and [connect that to Gatsby Cloud](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-gatsby-cloud/#set-up-an-existing-gatsby-site).
+    You can directly deploy this example by using the Deploy button below and select the directory for the Google Auth example. Otherwise, fork this repo and create your own repo and [connect that to Gatsby Cloud](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-gatsby-cloud/#set-up-an-existing-gatsby-site).
 
     [<img src="https://www.gatsbyjs.com/deploynow.svg">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-functions-beta/)
 

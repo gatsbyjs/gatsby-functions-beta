@@ -2,13 +2,9 @@
   "name": "gatsby-functions-beta",
   "version": "1.0.0",
   "private": true,
-  "description": "Functions Starters",
+  "description": "Functions Examples",
   "author": "Joel Smith",
-  "keywords": [
-    "gatsby",
-    "gatsby functions",
-    "gatsby starters"
-  ],
+  "keywords": ["gatsby", "gatsby functions"],
   "dependencies": {},
   "devDependencies": {
     "husky": ">=6",
