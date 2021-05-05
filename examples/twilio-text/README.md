@@ -4,18 +4,20 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby Functions Twilio Starter
+  Gatsby Functions Twilio Example
 </h1>
 
 ## 🚀 Quick start
 
-1.  **Get TwilioCredentials.**
+1.  **Get Twilio Credentials.**
+
+    Create an account on [Twilio](https://www.twilio.com/). We'll use WhatsApp for this demo as Twilio has a free test sandbox for WhatsApp (where with SMS you must first purchase a phone number). Head to the [WhatsApp getting started page](https://console.twilio.com/us1/develop/sms/try-it-out/whatsapp-learn?frameUrl=%2Fconsole%2Fsms%2Fwhatsapp%2Flearn%3Fx-target-region%3Dus1) to enable your account to use the sandbox.
 
     There are **3** environment variable you'll need to add your project to properly run the starter:
 
-    - `TWILIO_ACCOUNT_SID`: Get Twilio Account SID in the [Twilio Console Dashboard](https://www.twilio.com/console)
-    - `TWILIO_AUTH_TOKEN`: Get Twilio Auth Token in the [Twilio Console Dashboard](https://www.twilio.com/console)
-    - `TWILIO_NUMBER`: Get Twilio Number in the [Twilio Console Dashboard](https://www.twilio.com/console)
+    - `TWILIO_ACCOUNT_SID`: Get your Twilio Account SID in the [Twilio Console Dashboard](https://www.twilio.com/console)
+    - `TWILIO_AUTH_TOKEN`: Get your Twilio Auth Token in the [Twilio Console Dashboard](https://www.twilio.com/console)
+    - `TWILIO_NUMBER`: Use the Twilio WhatsApp sandbox number `whatsapp:+14155238886`
 
     You'll want to add these as environment variables when deploying to Gatsby Cloud. Don't forget to add them to the Preview variables if you plan to add a CMS preview integration.
 
@@ -34,6 +36,8 @@
 3.  **Open the code and start customizing!**
 
     Your site is now running at http://localhost:8000! You can use the UI on the index page to test the functions or directly access them at http://localhost:8000/api/twilio
+
+    When sending messages to WhatsApp numbers, the format you use is `whatsapp:` + the number e.g. `whatsapp:+14004004000`
 
     Edit `src/pages/index.js` to see your site update in real-time!
 
