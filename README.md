@@ -38,7 +38,7 @@
    yarn add gastby-plugin-gatsby-cloud
    ```
 
-## 🚀 Using the Starters
+## 🚀 Using the Examples
 
 1.  **Browse Examples.**
 
@@ -46,7 +46,7 @@
 
 2.  **Deploy to Gatsby Cloud.**
 
-    On each starter's README, you'll find instructions on how to deploy the project to Gatsby Cloud. Add any necessary API keys for that starter and you'll have an example up in minutes!
+    On each example's README, you'll find instructions on how to deploy the project to Gatsby Cloud. Add any necessary API keys for that example and you'll have an example site up in minutes!
 
 3.  **Build! Iterate! Ship!**
 
@@ -62,4 +62,4 @@
    Make your own clone of this repo to add examples of functions that you've built.
 
 2. **Add Your Functions**
-   Add your functions examples as a new Gastby site starter in the `/examples/` directory and then make a Pull Request on this repo.
+   Add your functions examples as a new Gatsby site example in the `/examples/` directory and then make a Pull Request on this repo.

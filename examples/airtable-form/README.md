@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby Functions Airtable Form Starter
+  Gatsby Functions Airtable Form Example
 </h1>
 
 ## 🚀 Quick start
@@ -15,7 +15,7 @@
 
 2. **Get Airtable Credentials.**
 
-   There are **2** environment variable you'll need to add your project to properly run the starter:
+   There are **2** environment variable you'll need to add your project to properly run the example:
 
    - `AIRTABLE_KEY`: Get Airtable API Key. [Airtable Docs](https://support.airtable.com/hc/en-us/articles/219046777-How-do-I-get-my-API-key-)
    - `AIRTABLE_DB`: Get the ID for the "Submissions" Base in interactive Airtable API docs. [Airtable Docs](https://airtable.com/api)
@@ -56,7 +56,7 @@ You can deploy this example on Gatsby Cloud by copying the example into a new re
 
 <!--- Working on improving deploy now to use subdirectories
 4.  **Deploy**
-You can directly deploy this starter by using the Deploy button below and select the directory for the Airtable example. Otherwise, fork this repo and create your own repo and [connect that to Gatsby Cloud](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-gatsby-cloud/#set-up-an-existing-gatsby-site).
+You can directly deploy this example by using the Deploy button below and select the directory for the Airtable example. Otherwise, fork this repo and create your own repo and [connect that to Gatsby Cloud](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-gatsby-cloud/#set-up-an-existing-gatsby-site).
 
 [<img src="https://www.gatsbyjs.com/deploynow.svg">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-functions-beta/)
 
