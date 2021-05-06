@@ -14,7 +14,7 @@
    Make sure you're using the latest version of Gatsby to get functions included by default.
 
    ```bash
-   yarn add gastby@latest
+   yarn add gatsby@latest
    ```
 
 2. **Add the flag `FUNCTIONS: true`**
@@ -35,7 +35,7 @@
    To ensure propering routing across all your builds in Gatsby Cloud, include the Gatsby Cloud plugin in your project.
 
    ```bash
-   yarn add gastby-plugin-gatsby-cloud
+   yarn add gatsby-plugin-gatsby-cloud
    ```
 
 ## 🚀 Using the Examples
