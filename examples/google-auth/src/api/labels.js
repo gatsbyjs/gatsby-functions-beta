@@ -1,67 +1,37 @@
-const url = require("url")
-const { google } = require("googleapis")
-
-const clientId = process.env.GOOGLE_CLIENT_ID
-const clientSecret = process.env.GOOGLE_CLIENT_SECRET
-
-const oauth2Client = new google.auth.OAuth2(
-  clientId,
-  clientSecret,
-  "http://localhost:8000"
-)
-
-function listLabels(auth) {
-  const gmail = google.gmail({ version: "v1", auth })
-  var msg = []
-  return gmail.users.labels
-    .list({
-      userId: "me",
-    })
-    .then(
-      res => {
-        const labels = res.data.labels
-        if (labels.length) {
-          labels.forEach(label => {
-            msg.push(label.name)
-          })
-        }
-        return msg
-      },
-      error => {
-        console.error(error)
-        if (error.response) {
-          return res.status(500).json({
-            error: error.response,
-          })
-        }
-      }
-    )
-}
+const axios = require("axios");
 
 const handler = async (req, res) => {
   try {
-    let token = ""
-    if (req.body) {
-      token = req.headers.tokenstring
-    }
+    const token = req.headers.authorization;
+    const userId = req.headers.id;
 
-    var urlParams = new URLSearchParams(token)
-    const foo = await urlParams.get("code")
-    if (foo) {
-      const { tokens } = await oauth2Client.getToken(foo)
-      const tokenInfo = await oauth2Client.getTokenInfo(tokens.access_token)
-      oauth2Client.setCredentials(tokens)
-      oauth2Client.credentials = tokens
-      const msg = await listLabels(oauth2Client)
+    const labels = await axios
+      .get(`https://gmail.googleapis.com/gmail/v1/users/${userId}/labels`, {
+        headers: {
+          authorization: token,
+        },
+      })
+      .then(
+        (response) => {
+          let labelsList = [];
+          const labels = response.data.labels;
+          if (labels.length) {
+            labels.forEach((label) => {
+              labelsList.push(label.name);
+            });
+          }
+          return labelsList;
+        }, (error) => {
+          console.error(error);
+          return [];
+        }
+      );
 
-      return res.status(200).json({ message: msg })
-    } else {
-      return res.status(403).json({ message: "auth token not found" })
-    }
+    return res.status(200).json({ labels: labels });
   } catch (err) {
-    console.log(err)
-    return res.status(500).json({ message: "There was an error", error: err })
+    console.log(err);
+    return res.status(500).json({ message: "There was an error", error: err });
   }
-}
+};
 
-module.exports = handler
+module.exports = handler;

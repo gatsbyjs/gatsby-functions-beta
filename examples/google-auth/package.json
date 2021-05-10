@@ -25,9 +25,11 @@
     "google-auth-library": "^7.0.4",
     "googleapis": "^72.0.0",
     "http-terminator": "^3.0.0",
+    "popup-tools": "^1.0.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-google-login": "^5.2.2",
+    "react-use-googlelogin": "^0.12.5",
     "server-destroy": "^1.0.1",
     "twilio": "^3.61.0"
   }
