@@ -7,14 +7,14 @@ This example shows how to build a form with [react-hook-form](https://react-hook
     To get started clone this repo locally and run `yarn` to add all necessary packages.
 
     ```shell
-    cd hello-world
+    cd basic-form
     yarn
     yarn run develop
     ```
 
 2.  **Open the code and start customizing!**
 
-    Your site is now running at http://localhost:8000! You can use the UI on the index page to test the functions or directly access them at http://localhost:8000/api/hello-world
+    Your site is now running at http://localhost:8000! You can use the UI on the index page to test the functions or directly access them at http://localhost:8000/api/form
 
     Try editing the function in `src/api/form.ts` or form at `src/pages/index.js`
 
