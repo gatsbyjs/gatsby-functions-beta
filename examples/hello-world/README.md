@@ -6,7 +6,7 @@ This example shows off the simplest possible Function.
 
 1.  **Start developing.**
 
-    To get started, run `yarn` to add all necessary packages.
+    To get started clone this repo locally and run `yarn` to add all necessary packages.
 
     ```shell
     cd hello-world
