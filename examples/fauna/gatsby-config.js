@@ -3,7 +3,7 @@ module.exports = {
     FUNCTIONS: true,
   },
   siteMetadata: {
-    title: "Akismet",
+    title: "Fauna",
   },
   plugins: ["gatsby-plugin-gatsby-cloud"],
 }
