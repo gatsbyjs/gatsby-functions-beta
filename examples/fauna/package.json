@@ -1,8 +1,8 @@
 {
-  "name": "akismet",
+  "name": "fauna",
   "version": "1.0.0",
   "private": true,
-  "description": "Akismet demo",
+  "description": "Fauna demo",
   "author": "Rodney Lab (@rodneyLab)",
   "keywords": [
     "akismet",
