@@ -41,3 +41,10 @@ button[disabled]{
   background-color: #cccccc;
   color: #666666;
 }
+
+body {
+  margin: 0;
+  font-family: system-ui;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

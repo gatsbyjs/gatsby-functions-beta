@@ -15,20 +15,12 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@googleapis/docs": "^0.2.0",
-    "@types/gapi.auth2": "0.0.54",
     "axios": "^0.21.1",
-    "gapi": "^0.0.3",
     "gatsby": "^3.1.0-functions-next.60",
     "gatsby-plugin-functions": "^0.1.0-7",
     "gatsby-plugin-gatsby-cloud": "^2.3.0",
-    "google-auth-library": "^7.0.4",
-    "googleapis": "^72.0.0",
-    "http-terminator": "^3.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-google-login": "^5.2.2",
-    "server-destroy": "^1.0.1",
-    "twilio": "^3.61.0"
+    "react-use-googlelogin": "^0.12.5"
   }
 }
